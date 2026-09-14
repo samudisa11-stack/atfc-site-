@@ -1,0 +1,145 @@
+<!doctype html><html lang="it"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cos'è un Expert Advisor per MetaTrader 5 e come funziona davvero | Autotrader Forex Club</title>
+<meta name="description" content="Cos'è un Expert Advisor, come si installa su MetaTrader 5, cosa può e cosa non può fare. Guida chiara senza promesse, scritta da chi li costruisce.">
+<link rel="canonical" href="https://www.autotraderforexclubea.com/guide/expert-advisor-metatrader-5.html">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Autotrader Forex Club">
+<meta property="og:title" content="Cos'è un Expert Advisor per MetaTrader 5 e come funziona davvero">
+<meta property="og:description" content="Cos'è un Expert Advisor, come si installa su MetaTrader 5, cosa può e cosa non può fare. Guida chiara senza promesse, scritta da chi li costruisce.">
+<meta property="og:url" content="https://www.autotraderforexclubea.com/guide/expert-advisor-metatrader-5.html">
+<meta property="og:image" content="https://www.autotraderforexclubea.com/anteprima.jpg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cos'è un Expert Advisor per MetaTrader 5 e come funziona davvero">
+<meta name="twitter:description" content="Cos'è un Expert Advisor, come si installa su MetaTrader 5, cosa può e cosa non può fare. Guida chiara senza promesse, scritta da chi li costruisce.">
+<meta name="twitter:image" content="https://www.autotraderforexclubea.com/anteprima.jpg">
+<meta name="theme-color" content="#0b0b10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow+Condensed:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Cos'è un Expert Advisor per MetaTrader 5 e come funziona davvero","description":"Cos'è un Expert Advisor, come si installa su MetaTrader 5, cosa può e cosa non può fare. Guida chiara senza promesse, scritta da chi li costruisce.","inLanguage":"it","datePublished":"2026-09-14","dateModified":"2026-09-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.autotraderforexclubea.com/guide/expert-advisor-metatrader-5.html"},"author":{"@type":"Organization","name":"Autotrader Forex Club","url":"https://www.autotraderforexclubea.com/"},"publisher":{"@type":"Organization","name":"Autotrader Forex Club","url":"https://www.autotraderforexclubea.com/","logo":{"@type":"ImageObject","url":"https://www.autotraderforexclubea.com/apple-touch-icon.png"}},"image":"https://www.autotraderforexclubea.com/anteprima.jpg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Autotrader Forex Club","item":"https://www.autotraderforexclubea.com/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://www.autotraderforexclubea.com/guide/"},{"@type":"ListItem","position":3,"name":"Cos'è un Expert Advisor per MetaTrader 5 e come funziona davvero"}]}]}</script>
+<style>
+:root{--gr:#b526b5;--gr2:#e05de0;--core:#00c221;--plus:#0091d5;
+--ink:#f2f2f5;--gy:#9aa2ae;--gy2:#c6cad2;--ln:rgba(255,255,255,.13);
+--disp:'Anton','Haettenschweiler','Impact','Arial Narrow',sans-serif;
+--cond:'Barlow Condensed','Roboto Condensed','Arial Narrow','Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;background:#0b0b10;color:var(--ink);
+ font:17px/1.72 'Segoe UI',system-ui,-apple-system,sans-serif;
+ background-image:radial-gradient(900px 600px at 82% -8%,rgba(181,38,181,.16),transparent 62%),
+  radial-gradient(700px 520px at 4% 22%,rgba(0,145,213,.10),transparent 60%);
+ background-attachment:fixed}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,11,16,.94);border-bottom:1px solid var(--ln)}
+nav .in{max-width:1180px;margin:0 auto;padding:0 18px;height:62px;display:flex;align-items:center;gap:12px;
+ flex-wrap:nowrap;overflow:hidden}
+.logo{font-family:var(--disp);font-size:21px;text-transform:uppercase;color:#fff;text-decoration:none;white-space:nowrap}
+.logo b{font-weight:400;color:var(--gr2)}
+nav .sp{margin-left:auto}
+.cta{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:800;
+ padding:9px 17px;border-radius:26px;color:#fff;background:linear-gradient(180deg,#1c1c26,#12121a);
+ border:1px solid rgba(255,255,255,.14)}
+.cta:hover{border-color:var(--gr)}
+.cta .sem{width:8px;height:8px;border-radius:50%;background:#22c55e}
+header.testa{padding:56px 0 10px}
+.occhio{font-family:var(--cond);font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--gr2)}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(32px,5.4vw,52px);line-height:1.04;
+ text-transform:uppercase;margin:10px 0 14px;letter-spacing:.005em}
+.somm{font-size:18.5px;color:var(--gy2);line-height:1.6;margin:0 0 10px}
+article{padding:14px 0 40px}
+article h2{font-family:var(--cond);font-size:26px;font-weight:800;letter-spacing:.6px;
+ text-transform:uppercase;margin:38px 0 10px;color:#fff}
+article p{margin:0 0 17px;color:#dcdee6}
+article b{color:#fff}
+code{font-family:'SF Mono',ui-monospace,monospace;font-size:.92em;background:rgba(255,255,255,.07);
+ padding:2px 6px;border-radius:6px;color:var(--gr2)}
+.indice{border:1px solid var(--ln);border-radius:16px;padding:18px 22px;margin:26px 0 30px;background:rgba(255,255,255,.03)}
+.indice b{display:block;font-family:var(--cond);font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gy);margin-bottom:8px}
+.indice a{display:block;color:var(--gy2);text-decoration:none;padding:4px 0;font-size:15.5px}
+.indice a:hover{color:#fff}
+.altre{border-top:1px solid var(--ln);padding:30px 0 10px}
+.altre h3{font-family:var(--cond);font-size:20px;letter-spacing:1.4px;text-transform:uppercase;margin:0 0 14px}
+.altre a{display:block;padding:13px 16px;border:1px solid var(--ln);border-radius:14px;margin-bottom:10px;
+ color:var(--gy2);text-decoration:none}
+.altre a:hover{border-color:var(--gr);color:#fff}
+.altre a b{display:block;color:#fff;font-size:16px;margin-bottom:2px}
+.box{border-left:3px solid var(--gr);background:rgba(181,38,181,.10);border-radius:0 14px 14px 0;
+ padding:18px 22px;margin:30px 0}
+.box b{display:block;margin-bottom:4px}
+.box p{margin:0;font-size:15px;color:var(--gy2)}
+footer{border-top:1px solid var(--ln);padding:28px 0 50px;color:var(--gy);font-size:13.4px}
+footer a{color:var(--gy2)}
+footer .pie{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+@media(max-width:700px){
+  body{font-size:16px}
+  .logo{font-size:16px}
+  .cta{font-size:11.5px;padding:8px 12px;white-space:nowrap}
+  nav .in{gap:8px;padding:0 14px}
+  header.testa{padding:34px 0 6px}
+  article h2{font-size:22px}
+  .somm{font-size:17px}
+}
+</style></head><body>
+<nav><div class="in">
+  <a class="logo" href="../index.html">Autotrader <b>Forex</b> Club</a>
+  <span class="sp"></span>
+  <a class="cta" href="../index.html#schede"><span class="sem"></span>Vedi i robot</a>
+</div></nav>
+<div class="wrap">
+<header class="testa">
+  <div class="occhio">Guida · Le basi</div>
+  <h1>Cos'è un Expert Advisor per MetaTrader 5 e come funziona davvero</h1>
+  <p class="somm">Cos'è un Expert Advisor, come si installa su MetaTrader 5, cosa può e cosa non può fare. Guida chiara senza promesse, scritta da chi li costruisce.</p>
+</header>
+<div class="indice"><b>In questa guida</b><a href="#come-si-installa-in-concreto">Come si installa, in concreto</a><a href="#cosa-fa-un-expert-advisor-meglio-di-una-">Cosa un Expert Advisor può automatizzare con maggiore coerenza</a><a href="#cosa-non-fa-e-chi-dice-il-contrario-ti-s">Cosa non fa un Expert Advisor</a><a href="#come-si-valuta-un-expert-advisor-prima-d">Come si valuta un Expert Advisor prima di comprarlo</a><a href="#backtest-demo-reale">Backtest, demo, reale</a><a href="#una-cosa-sul-rischio-detta-chiaramente">Il rischio, in chiaro</a></div>
+<article>
+<p>Un Expert Advisor — spesso abbreviato in EA, e chiamato «robot» da quasi tutti — è un programma che gira <b>dentro</b> MetaTrader 5 e prende le decisioni operative al posto tuo: legge il grafico, decide se le condizioni ci sono, apre la posizione, la gestisce e la chiude.</p>
+<p>La parola «robot» è comoda ma ingannevole. Non c&#x27;è nessuna intelligenza che «capisce» il mercato: c&#x27;è un insieme di regole scritte da qualcuno, che il programma applica senza stancarsi e senza cambiare idea. Tutto il valore di un Expert Advisor sta in quelle regole e nella disciplina con cui vengono rispettate.</p>
+<h2 id="come-si-installa-in-concreto">Come si installa, in concreto</h2>
+<p>L&#x27;Expert Advisor è un file con estensione <code>.ex5</code>, che va copiato nella cartella <code>MQL5/Experts</code> del terminale. Si arriva lì dal menu <b>File → Apri scheda dati</b>. Riavviato MetaTrader, il robot compare nella Navigatore e lo trascini sul grafico del simbolo su cui vuoi che lavori.</p>
+<p>Tre cose che quasi nessuno dice, e che fanno la differenza fra un&#x27;installazione che funziona e una che no.</p>
+<p>La prima: il robot lavora <b>su quel grafico e su quel simbolo</b>. Se lo vuoi su oro, Nasdaq ed EUR/USD, ne apri tre di grafici. Non è un difetto, è il modo in cui MetaTrader è costruito.</p>
+<p>La seconda: serve il <b>trading algoritmico attivo</b>, il pulsante in alto nella barra degli strumenti. Se è rosso, il robot vede tutto ma non può mandare ordini.</p>
+<p>La terza: se il computer si spegne, il robot si spegne. Per questo chi opera sul serio usa un <b>VPS</b>, un computer sempre acceso in un centro dati, spesso vicino ai server del broker. Costa pochi euro al mese e toglie di mezzo blackout, aggiornamenti di sistema e connessioni che cadono.</p>
+<h2 id="cosa-fa-un-expert-advisor-meglio-di-una-">Cosa un Expert Advisor può automatizzare con maggiore coerenza</h2>
+<p>Un programma non si stanca, non salta una regola perché «questa volta si vede che sale» e non raddoppia dopo una perdita per rifarsi. Applica la stessa misura di rischio alla centesima operazione come alla prima, se è stato programmato per farlo.</p>
+<p>Sono fra gli errori che più spesso danneggiano un conto, e sono errori emotivi prima che tecnici. Un programma non è soggetto a questo tipo di pressione, ma resta vincolato alle regole che gli sono state date.</p>
+<p>In più, controlla più mercati insieme, a qualunque ora, e reagisce in millisecondi dove una persona impiegherebbe secondi.</p>
+<h2 id="cosa-non-fa-e-chi-dice-il-contrario-ti-s">Cosa non fa un Expert Advisor</h2>
+<p>Non prevede il futuro. Nessun software lo fa. Un Expert Advisor applica regole che <b>in passato</b> hanno prodotto un vantaggio statistico, e scommette che quel vantaggio resti. Può ridursi, può sparire.</p>
+<p>Non elimina le perdite. Un sistema che chiude in guadagno il settanta per cento delle volte perde comunque tre operazioni su dieci, e quelle tre possono capitare di fila.</p>
+<p>Non funziona uguale su ogni broker. Spread diversi, esecuzioni diverse, orari diversi: lo stesso robot dà numeri diversi. È il motivo per cui un risultato ottenuto altrove non è mai una garanzia per te.</p>
+<p>E non si configura da solo. I parametri — rischio per operazione, orari, filtri — cambiano il comportamento in modo radicale.</p>
+<h2 id="come-si-valuta-un-expert-advisor-prima-d">Come si valuta un Expert Advisor prima di comprarlo</h2>
+<p>Guarda il <b>rischio per operazione</b>, non il rendimento. Il rendimento è la parte facile da gonfiare: basta rischiare di più. Un sistema che rende il cento per cento l&#x27;anno rischiando il cinque per cento a operazione è molto più fragile di uno che rende il trenta rischiando l&#x27;uno.</p>
+<p>Guarda il <b>drawdown</b>, cioè quanto è sceso il conto nel momento peggiore. È il numero che ti dice se riusciresti davvero a tenerlo acceso.</p>
+<p>Chiedi <b>quante operazioni</b> compongono il risultato. Un vantaggio misurato su cento operazioni non è misurato: è un&#x27;impressione. Su migliaia comincia a voler dire qualcosa.</p>
+<p>Chiedi <b>su che periodo</b> è stato provato, e se comprende anni difficili. Un sistema testato solo sul 2023 e 2024 non ha mai visto un mercato ostile.</p>
+<p>Diffida di chi ti mostra solo la curva che sale. Chiedi il periodo peggiore: chi ha un prodotto serio te lo mostra senza problemi.</p>
+<h2 id="backtest-demo-reale">Backtest, demo, reale</h2>
+<p>Il <b>backtest</b> è la simulazione sui dati storici. Serve a scartare le idee sbagliate, non a promettere risultati: sui dati passati è facile costruire un sistema perfetto che poi fallisce, perché è stato costruito conoscendo già le risposte.</p>
+<p>La <b>demo</b> è il conto finto in tempo reale. Serve a verificare che l&#x27;installazione sia corretta e che il robot si comporti come previsto, ma non riproduce lo scivolamento dei prezzi né la pressione psicologica.</p>
+<p>Il <b>conto reale piccolo</b> è l&#x27;unica prova vera. Qualche mese con la cifra minima dice più di qualunque simulazione.</p>
+<h2 id="una-cosa-sul-rischio-detta-chiaramente">Il rischio, in chiaro</h2>
+<p>Un Expert Advisor non riduce il rischio di mercato: ne rende sistematica e misurabile la gestione, nei limiti delle regole con cui è stato costruito. Prima di operare con denaro reale è opportuno confrontarsi con il professionista che segue i propri investimenti.</p>
+</article>
+<div class="box"><b>Avvertenza</b>
+<p>Questa guida ha finalità esclusivamente informative e non costituisce consulenza finanziaria. Autotrader Forex Club sviluppa software per MetaTrader 5 e non fornisce consulenza in materia di investimenti. Il trading con strumenti a leva comporta un rischio elevato di perdita del capitale.</p></div>
+<div class="altre"><h3>Le altre guide</h3><a href="ict-smart-money-concepts.html"><b>ICT e Smart Money Concepts: guida pratica ai concetti che contano</b><span>Liquidità, struttura rotta, squilibrio, ritracciamento ottimale: cosa significano davvero i conc…</span></a><a href="prop-firm-challenge.html"><b>Prop firm challenge: come funziona e cosa la fa fallire</b><span>Obiettivo, perdita giornaliera, perdita totale: le regole di una challenge spiegate bene, e perc…</span></a><a href="backtest-monte-carlo.html"><b>Backtest e Monte Carlo: come leggere i numeri di un robot</b><span>Overfitting, degrado del vantaggio, simulazioni Monte Carlo: come capire se i numeri di un Exper…</span></a></div>
+</div>
+<footer><div class="wrap">
+  © 2023 Autotrader Forex Club · Marchio registrato · P. IVA 17531191009
+  <div class="pie">
+    <a href="../index.html">Torna al sito</a>
+    <a href="https://www.youtube.com/@autotraderforexclub" rel="noopener" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/autotraderforexclub_ea/" rel="noopener" target="_blank">Instagram</a>
+  </div>
+</div></footer>
+</body></html>
